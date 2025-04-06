@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentPhysical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <CheckBox
+        android:id="@+id/Severe_difficulty_breathing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Severe difficulty breathing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/Severe_chest_pain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Severe chest pain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Severe_difficulty_breathing" />
+
+    <CheckBox
+        android:id="@+id/Extreme_fatigue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extreme fatigue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Severe_chest_pain" />
+
+    <CheckBox
+        android:id="@+id/Confusion_or_disorientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confusion or disorientation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Extreme_fatigue" />
+
+    <CheckBox
+        android:id="@+id/Loss_of_consciousness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loss of consciousness"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Confusion_or_disorientation" />
+
+    <CheckBox
+        android:id="@+id/Persistent_high_fever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Persistent high fever"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Loss_of_consciousness" />
+
+    <CheckBox
+        android:id="@+id/Dry_cough"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dry cough"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Persistent_high_fever" />
+
+    <CheckBox
+        android:id="@+id/Sore_throat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sore throat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Dry_cough" />
+
+    <CheckBox
+        android:id="@+id/Loss_of_sense_of_taste_or_smell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loss of sense of taste or smell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Sore_throat" />
+
+    <CheckBox
+        android:id="@+id/Headache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Headache"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Loss_of_sense_of_taste_or_smell" />
+
+    <CheckBox
+        android:id="@+id/Muscle_or_joint_pain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Muscle or joint pain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Headache" />
+
+    <CheckBox
+        android:id="@+id/Runny_or_stuffy_nose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Runny or stuffy nose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Muscle_or_joint_pain" />
+
+    <CheckBox
+        android:id="@+id/Nausea_or_vomiting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nausea or vomiting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Runny_or_stuffy_nose" />
+
+    <CheckBox
+        android:id="@+id/Diarrhea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diarrhea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Nausea_or_vomiting" />
+
+    <CheckBox
+        android:id="@+id/Chills_or_shivers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chills or shivers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Diarrhea" />
+
+    <CheckBox
+        android:id="@+id/Abdominal_pain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abdominal pain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Chills_or_shivers" />
+
+    <CheckBox
+        android:id="@+id/Abdominal_pain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abdominal pain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Chills_or_shivers" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

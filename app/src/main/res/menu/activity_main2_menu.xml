@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeId"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/assesmentsId"
+        android:title="See your assesments" />
+
+    <item
+        android:id="@+id/helpId"
+        android:title="Help" />
+
+</menu>
