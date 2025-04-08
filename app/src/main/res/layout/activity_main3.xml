@@ -6,16 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity3">
 
-    <FrameLayout
-        android:id="@+id/FragmentSelectQuestions"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:tag="MY_FRAGMENT_TAG" />
+        android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/FragmentPhysic"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:tag="MY_FRAGMENT_TAG" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <FrameLayout
+            android:id="@+id/FragmentSelectQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="MY_FRAGMENT_TAG">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="com.example.td2_mobile_programming.FragmentSelectionQuestions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+
+    </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

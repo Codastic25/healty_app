@@ -26,12 +26,12 @@ public class MainActivity3 extends AppCompatActivity {
         if (savedInstanceState == null) {
             // Créer le fragment
             FragmentSelectionQuestions questionsFragment = new FragmentSelectionQuestions();
-            FragmentPhysical phyicFragment = new FragmentPhysical();
+            //FragmentPhysical physicFragment = new FragmentPhysical();
 
             // Démarrer la transaction de fragment
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.FragmentSelectQuestions, questionsFragment);
-            transaction.replace(R.id.FragmentPhysic, phyicFragment);
+            //transaction.replace(R.id.les_pb_physiques, physicFragment);
             transaction.commit();
         }
     }

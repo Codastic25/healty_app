@@ -5,14 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".FragmentPhysical">
+    tools:context=".FragmentPhysical"
+    android:id="@+id/les_pb_physiques">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        app:layout_constraintStart_toStartOf="parent" />
 
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
     <CheckBox
         android:id="@+id/Severe_difficulty_breathing"
@@ -144,14 +153,62 @@
         app:layout_constraintTop_toBottomOf="@id/Chills_or_shivers" />
 
     <CheckBox
-        android:id="@+id/Abdominal_pain"
+        android:id="@+id/Skin_rash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Abdominal pain"
+        android:text="Skin rash"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Chills_or_shivers" />
+        app:layout_constraintTop_toBottomOf="@id/Abdominal_pain" />
 
+    <CheckBox
+        android:id="@+id/Red_irritated_eyes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red or irritated eyes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Skin_rash" />
 
+    <CheckBox
+        android:id="@+id/Difficulty_sleeping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Difficulty sleeping"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Red_irritated_eyes" />
+
+    <CheckBox
+        android:id="@+id/Maintaining_regular_physical_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maintaining regular physical activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Difficulty_sleeping" />
+
+    <CheckBox
+        android:id="@+id/Eating_balanced_diet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eating a balanced diet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Maintaining_regular_physical_activity" />
+
+    <CheckBox
+        android:id="@+id/Staying_hydrated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Staying hydrated"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Eating_balanced_diet" />
+
+    <CheckBox
+        android:id="@+id/Getting_adequate_sleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Getting adequate sleep (7-9 hours)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Staying_hydrated" />
+    </LinearLayout>
+</ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
