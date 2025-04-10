@@ -4,16 +4,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/background_healthy_image"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:adjustViewBounds="true"
+        android:alpha="0.2"
+        android:scaleType="centerCrop"
+        android:src="@drawable/concours_amour_2024" />
+
     <Button
         android:id="@+id/startAssesment"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="50dp"
         android:backgroundTint="#262A76"
         android:text="Start assesment"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
+
+
 
     <TextView
         android:id="@+id/addInfos"
@@ -21,7 +32,7 @@
         android:layout_height="wrap_content"
         android:text="Completing this assesment will take approximatively 10 minutes."
         android:textSize="10sp"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="90dp"
         android:layout_marginLeft="50dp"/>
 
 </LinearLayout>

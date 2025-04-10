@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentPhysical"
+    android:id="@+id/les_pb_mentaux">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textResultMental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mental health test - Select all symptoms you are experiencing"
+                android:background="@color/dark_green"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal" />
+
+            <CheckBox
+                android:id="@+id/Frequent_feelings_of_sadness_or_hopelessness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Frequent feelings of sadness or hopelessness"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/Difficulty_concentrating_or_focusing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Difficulty concentrating or focusing"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Frequent_feelings_of_sadness_or_hopelessness" />
+
+            <CheckBox
+                android:id="@+id/Frequent_mood_swings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frequent mood swings"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Difficulty_concentrating_or_focusing" />
+
+            <CheckBox
+                android:id="@+id/Persistent_anxiety_or_nervousness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Persistent anxiety or nervousness"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Frequent_mood_swings" />
+
+            <CheckBox
+                android:id="@+id/Feeling_overwhelmed_or_unable_to_cope"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feeling overwhelmed or unable to cope"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Persistent_anxiety_or_nervousness" />
+
+            <CheckBox
+                android:id="@+id/Lack_of_interest_in_activities_once_enjoyed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lack of interest in activities once enjoyed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Feeling_overwhelmed_or_unable_to_cope" />
+
+            <CheckBox
+                android:id="@+id/Sleep_disturbances"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sleep disturbances (too much or too little)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Lack_of_interest_in_activities_once_enjoyed" />
+
+            <CheckBox
+                android:id="@+id/Frequent_irritability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frequent irritability"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Sleep_disturbances" />
+
+            <CheckBox
+                android:id="@+id/Positive_social_interactions_or_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Positive social interactions or support"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Frequent_irritability" />
+
+            <CheckBox
+                android:id="@+id/Practicing_mindfulness_or_relaxation_techniques"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Practicing mindfulness or relaxation techniques"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Positive_social_interactions_or_support" />
+
+            <CheckBox
+                android:id="@+id/Engaging_in_enjoyable_activities_regularly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Engaging in enjoyable activities regularly"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Practicing_mindfulness_or_relaxation_techniques" />
+
+
+            <Button
+                android:id="@+id/submitMental"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="50dp"
+                android:backgroundTint="@color/dark_green"
+                android:text="Submit"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

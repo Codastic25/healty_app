@@ -9,8 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity3 extends AppCompatActivity {
@@ -21,61 +19,46 @@ public class MainActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
+        //ici je déclare mes fragments qui sont dans le meme container
 
-        // Ajouter le fragment dynamiquement
-        if (savedInstanceState == null) {
-            // Créer le fragment
-            FragmentSelectionQuestions questionsFragment = new FragmentSelectionQuestions();
-            //FragmentPhysical physicFragment = new FragmentPhysical();
+        FragmentSelectionQuestions questionsFragment = new FragmentSelectionQuestions();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainerAll, questionsFragment).commit();
 
-            // Démarrer la transaction de fragment
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.FragmentSelectQuestions, questionsFragment);
-            //transaction.replace(R.id.les_pb_physiques, physicFragment);
-            transaction.commit();
-        }
+        /*
+        ici pas besoin de les déclarer puisque j'ai deja des event boutons qui les lie
+
+        FragmentPhysical physiqueFragment = new FragmentPhysical();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainerAll, physiqueFragment).commit();
+
+        FragmentMentak mentalFragment = new FragmentMentak();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainerAll, mentalFragment).commit();
+
+        FragmentResult resultFragment = new FragmentResult();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainerAll, resultFragment).commit();
+
+         */
     }
 
     //le menu
-
+// Inflater le menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main2_menu, menu);
-        Toast.makeText(this, "Menu chargé", Toast.LENGTH_SHORT).show(); // Confirmation que le menu est chargé
         return true;
     }
 
-    //les actions sur les items de mon menu
+    // Gérer les actions sur les items du menu
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
 
-        //je met ici les variables de chaque item pour les utiliser ensuite
-        int id = item.getItemId();//correspond à l'élément clické (je reprends son id)
-
-        /*
-        Je vais comparer avec les id des éléments du menu
-
-        home => R.id.homeId;
-        assesment => R.id.assesmentsId;
-        help => R.id.helpId;
-         */
-
-        if (id == R.id.homeId){
-            Intent goHomeIntent = new Intent(MainActivity3.this, MainActivity.class);//on revient à la page home
+        if (id == R.id.homeId) {
+            Intent goHomeIntent = new Intent(MainActivity3.this, MainActivity.class);
             startActivity(goHomeIntent);
+            return true;
         }
-        /*
 
-        Pas d'autres events pour les autres items du menu
-
-        if (id == R.id.assesmentsId){
-
-        }
-        if (id == R.id.helpId){
-
-        }
-         */
-
+        // Ajoute ici des actions pour d'autres items du menu si nécessaire
         return super.onOptionsItemSelected(item);
     }
 }

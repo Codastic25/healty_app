@@ -23,6 +23,18 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <TextView
+                android:id="@+id/textResultPhysique"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Physical health test - Select all symptoms you are experiencing"
+                android:background="@color/dark_green"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal" />
+
     <CheckBox
         android:id="@+id/Severe_difficulty_breathing"
         android:layout_width="wrap_content"
@@ -106,6 +118,7 @@
 
     <CheckBox
         android:id="@+id/Muscle_or_joint_pain"
+        android:tag="2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Muscle or joint pain"
@@ -207,6 +220,18 @@
         android:text="Getting adequate sleep (7-9 hours)"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Staying_hydrated" />
+
+
+            <Button
+                android:id="@+id/submitPhysique"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="50dp"
+                android:backgroundTint="@color/dark_green"
+                android:text="Submit"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
     </LinearLayout>
 </ScrollView>
 

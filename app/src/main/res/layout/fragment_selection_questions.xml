@@ -6,31 +6,54 @@
     tools:context=".FragmentSelectionQuestions"
     android:id="@+id/fragment_container_questions">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/message1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select the questions"
+        android:textColor="@color/dark_green"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-    <Button
-        android:id="@+id/physical"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Physical"
-        android:layout_marginTop="50dp"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center">
 
-    <Button
-        android:id="@+id/mental"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Mental" />
+        <Button
+            android:id="@+id/physical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Physical"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_green"
+            android:layout_marginEnd="6dp"/>
 
-    <Button
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Result"
-        android:layout_marginTop="150dp"/>
+        <Button
+            android:id="@+id/mental"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mental"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_green"
+            android:layout_marginEnd="16dp"/>
+
+        <Button
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_green"
+            android:text="Result"/>
+
+    </LinearLayout>
+
+
 
 </FrameLayout>

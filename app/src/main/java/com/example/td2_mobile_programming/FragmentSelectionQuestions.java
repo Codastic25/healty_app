@@ -21,21 +21,33 @@ public class FragmentSelectionQuestions extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        // mon objet vue
         View view = inflater.inflate(R.layout.fragment_selection_questions, container, false);
-        Button physic = view.findViewById(R.id.physical);
 
-        physic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentPhysical fragmentPhysical = new FragmentPhysical();
-                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragmentContainerView, fragmentPhysical);
-                transaction.commit();
-            }
-        });
+        //bouton resultat pour aller sur le fragment result
+        Button res = view.findViewById(R.id.result);
+        res.setOnClickListener(v -> navigateToFragment (new FragmentResult()));
+
+        //bouton physique pour aller sur le fragment physique
+        Button physique = view.findViewById(R.id.physical);
+        physique.setOnClickListener(v -> navigateToFragment (new FragmentPhysical()));
+
+        //bouton mental pour aller sur le fragment mental
+        Button mental = view.findViewById(R.id.mental);
+        mental.setOnClickListener(v -> navigateToFragment (new FragmentMentak()));
 
 
-        // Inflate the layout for this fragment
+        // Retourner la vue
         return view;
     }
+
+    private void navigateToFragment(Fragment fragment) {
+        // Démarrer la transaction
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+        // Naviguer vers mon seul fragment container
+        transaction.replace(R.id.FragmentContainerAll, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 }
+
