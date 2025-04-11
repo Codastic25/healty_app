@@ -21,13 +21,6 @@ public class Main2MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        /*
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);  // Afficher une flèche pour revenir en arrière
-        }
-
-         */
-
         Button startAssesmentButton = findViewById(R.id.startAssesment);//je prends l'id de ce bouton pour l'utiliser plus tard
 
         startAssesmentButton.setOnClickListener(new View.OnClickListener() {//event de mon bouton

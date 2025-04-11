@@ -27,4 +27,14 @@
         android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal" />
 
+    <TextView
+        android:id="@+id/finalScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score total :"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        />
+
+
 </LinearLayout>

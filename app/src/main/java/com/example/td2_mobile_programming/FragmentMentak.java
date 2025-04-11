@@ -45,16 +45,32 @@ public class FragmentMentak extends Fragment {
         checkboxMental.add(view.findViewById(R.id.Practicing_mindfulness_or_relaxation_techniques));
         checkboxMental.add(view.findViewById(R.id.Engaging_in_enjoyable_activities_regularly));
 
-        //conditions et ajout du score final
-        int finalScore = 0;
-
-        for (CheckBox item : checkboxMental) {
-            if (item.isChecked()) {
-                finalScore += 5;//calcul du final score, +5 à chaque item séléctionné
+        goToResult.setOnClickListener(v -> {
+            int mentalScore = 0;
+            for (CheckBox item : checkboxMental) {
+                if (item.isChecked()) {
+                    mentalScore += 5;
+                }
             }
-        }
 
-        goToResult.setOnClickListener(v -> navigateToFragment (new FragmentResult()));
+            // On récupère toujours le score physique ici
+            int physicalScoreFinal = 0;
+            if (getArguments() != null) {
+                physicalScoreFinal = getArguments().getInt("physicalScore", 0);
+            }
+
+            int totalScore = physicalScoreFinal + mentalScore;
+
+            FragmentResult fragmentResult = new FragmentResult();
+            Bundle bundle = new Bundle();
+            bundle.putInt("mentalScoreAndPhysicScore", totalScore);
+            fragmentResult.setArguments(bundle);
+
+            navigateToFragment(fragmentResult);
+        });
+
+
+
 
 
         // Retourner la vue

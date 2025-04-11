@@ -11,13 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 
 import java.util.ArrayList;
 
 public class FragmentPhysical extends Fragment {
-
-    private ArrayList<CheckBox> CheckboxPhysic;
 
     public FragmentPhysical() {
         // Required empty public constructor
@@ -26,10 +25,12 @@ public class FragmentPhysical extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
         // mon objet vue
         View view = inflater.inflate(R.layout.fragment_physical, container, false);
+
+        //bouton submit
+        Button goToMental = view.findViewById(R.id.submitPhysique);
+
         ArrayList<CheckBox> checkboxPhysic = new ArrayList<>();
 
         checkboxPhysic.add(view.findViewById(R.id.Severe_difficulty_breathing));
@@ -56,29 +57,25 @@ public class FragmentPhysical extends Fragment {
         checkboxPhysic.add(view.findViewById(R.id.Staying_hydrated));
         checkboxPhysic.add(view.findViewById(R.id.Getting_adequate_sleep));
 
-        //bouton submit
-        Button goToMental = view.findViewById(R.id.submitPhysique);
-
-
-
-        //conditions et ajout du score final
-
-
-
-
-
-
-        //aller sur le fragment mental
         goToMental.setOnClickListener(v -> {
-                    int finalScore = calculateScore();
-                    Bundle args = new Bundle();
-                    args.putInt("Score", finalScore);
-                    FragmentMentak fragmentMental = new FragmentMentak();
-                    fragmentMental.setArguments(args);
-                    navigateToFragment(fragmentMental);
+            int finalScore = 0;
+            for (CheckBox cb : checkboxPhysic) {
+                if (cb.isChecked()) {
+                    finalScore += 5;
                 }
+            }
 
-                );
+            FragmentMentak fragmentMentak = new FragmentMentak();
+
+            Bundle bundle = new Bundle();
+            bundle.putInt("physicalScore", finalScore);
+
+            fragmentMentak.setArguments(bundle);
+
+            navigateToFragment(fragmentMentak);
+        });
+
+
 
 
 
@@ -86,20 +83,6 @@ public class FragmentPhysical extends Fragment {
         return view;
 
 
-
-    }
-
-
-    private int calculateScore (){
-
-        int finalScore =0;
-
-        for (CheckBox item : CheckboxPhysic) {
-            if (item.isChecked()) {
-                finalScore += 5;//calcul du final score, +5 à chaque item séléctionné
-            }
-        }
-        return finalScore;
     }
 
     private void navigateToFragment(Fragment fragment) {
